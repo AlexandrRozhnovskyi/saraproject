@@ -34,9 +34,11 @@ namespace ClassLibrary1.Services
 
         public async Task<ObjectDto> PostObject(UpdateObjectRequest objectRequest)
         {
+            Random rnd = new Random();
+            
             var newObject = new Object
             {
-                Id = 1,
+                Id = rnd.Next(1, 6666),
                 
                 City = objectRequest.City,
                 
