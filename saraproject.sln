@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "saraproject", "saraproject\saraproject.csproj", "{3ECA3866-0FA9-426B-9524-9E1F2F80E33F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara.Web", "Sara.Web\Sara.Web.csproj", "{3ECA3866-0FA9-426B-9524-9E1F2F80E33F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara.DataAccessLayer", "Sara.DataAccessLayer\Sara.DataAccessLayer.csproj", "{D9CEB7A0-A94D-4852-AD4C-9CBC880B4BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sara.BusinessLogicLayer", "Sara.BusinessLogicLayer\Sara.BusinessLogicLayer.csproj", "{66683C3A-40CD-4C35-B046-EDE699A1BDDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +16,13 @@ Global
 		{3ECA3866-0FA9-426B-9524-9E1F2F80E33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ECA3866-0FA9-426B-9524-9E1F2F80E33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ECA3866-0FA9-426B-9524-9E1F2F80E33F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9CEB7A0-A94D-4852-AD4C-9CBC880B4BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9CEB7A0-A94D-4852-AD4C-9CBC880B4BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9CEB7A0-A94D-4852-AD4C-9CBC880B4BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9CEB7A0-A94D-4852-AD4C-9CBC880B4BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66683C3A-40CD-4C35-B046-EDE699A1BDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66683C3A-40CD-4C35-B046-EDE699A1BDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66683C3A-40CD-4C35-B046-EDE699A1BDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66683C3A-40CD-4C35-B046-EDE699A1BDDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
