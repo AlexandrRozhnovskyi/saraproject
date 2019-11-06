@@ -20,17 +20,17 @@ namespace ClassLibrary1.Repositories
         
         public IEnumerable<Object> GetAll()
         {
-            return _db.Info;
+            return _db.Objects;
         }
  
         public Object Get(int id)
         {
-            return _db.Info.Find(id);
+            return _db.Objects.Find(id);
         }
  
         public void Create(Object @object)
         {
-            _db.Info.Add(@object);
+            _db.Objects.Add(@object);
         }
  
         public void Update(Object @object)
@@ -40,14 +40,14 @@ namespace ClassLibrary1.Repositories
  
         public IEnumerable<Object> Find(Func<Object, Boolean> predicate)
         {
-            return _db.Info.Where(predicate).ToList();
+            return _db.Objects.Where(predicate).ToList();
         }
  
         public void Delete(int id)
         {
-            Object book = _db.Info.Find(id);
+            Object book = _db.Objects.Find(id);
             if (book != null)
-                _db.Info.Remove(book);
+                _db.Objects.Remove(book);
         }
         
     }

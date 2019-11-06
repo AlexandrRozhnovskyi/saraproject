@@ -8,7 +8,7 @@ namespace ClassLibrary1.EF
 {
     public class MainInfoContext : DbContext
     {
-        public DbSet<Object> Info { get; set; }
+        public DbSet<Object> Objects { get; set; }
 
         public MainInfoContext(DbContextOptions<MainInfoContext> options)
             : base(options)
@@ -25,9 +25,9 @@ namespace ClassLibrary1.EF
             //OR:
             //UseTestDataBase(context);
 
-            if (!context.Info.Any())
+            if (!context.Objects.Any())
             {
-                context.Info.AddRange(GetPreconfiguredAny());
+                context.Objects.AddRange(GetPreconfiguredAny());
             }
 
             await context.SaveChangesAsync();

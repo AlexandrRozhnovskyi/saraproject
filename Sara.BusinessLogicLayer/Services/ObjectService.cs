@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using ClassLibrary1.DataTransferObjects;
+using ClassLibrary1.EF;
 using ClassLibrary1.Interfaces;
+using Ninject.Activation;
 using saraproject.Models;
 using saraproject.Models.Request;
 using Object = ClassLibrary1.Entities.Object;
@@ -15,11 +17,13 @@ namespace ClassLibrary1.Services
     {
         private readonly IUnitOfWork _db;
         private readonly IMapper _mapper;
+        private readonly MainInfoContext _context;
 
-        public ObjectService(IUnitOfWork db, IMapper mapper)
+        public ObjectService(IUnitOfWork db, IMapper mapper, MainInfoContext context)
         {
             _db = db;
             _mapper = mapper;
+            _context = context;
         }
         
         public async Task<List<Object>> GetAllObjects()
@@ -46,11 +50,16 @@ namespace ClassLibrary1.Services
                 
                 Info = objectRequest.Info
             };
+//
+//            _db.Objects.Update(newObject);
+//            _db.Save();
 
-            _db.Objects.Update(newObject);
-            _db.Save();
+            _context.Objects.Add(newObject);
+            await _context.SaveChangesAsync();
 
-            return  _mapper.Map<ObjectDto>(newObject);
+            var zalupa = _mapper.Map<ObjectDto>(newObject);
+            
+            return zalupa;
         }
     }
 }

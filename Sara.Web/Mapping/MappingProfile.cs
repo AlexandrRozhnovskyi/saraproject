@@ -8,7 +8,7 @@ namespace saraproject.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<ObjectDto, Object>();
+            CreateMap<Object, ObjectDto>();
         }
     }
 }

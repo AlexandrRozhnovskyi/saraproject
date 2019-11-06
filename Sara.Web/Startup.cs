@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using ClassLibrary1.Extensions;
 using ClassLibrary1.Interfaces;
 using ClassLibrary1.Repositories;
@@ -39,7 +40,8 @@ namespace saraproject
             //services.AddSyncWebAdapter();
             
             services.AddControllers();
-            
+
+            services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(setup =>
             {
                 setup.SwaggerDoc("v1", new OpenApiInfo
