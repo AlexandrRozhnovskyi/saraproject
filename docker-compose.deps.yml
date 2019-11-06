@@ -13,4 +13,4 @@ services:
 
 volumes:
   sara_postgres_volume:
-    driver: local
+    driver: local2
