@@ -52,9 +52,7 @@ namespace ClassLibrary1.Services
                 
                 Info = objectRequest.Info
             };
-//
-//            _db.Objects.Update(newObject);
-//            _db.Save();
+
 
             _context.Objects.Add(newObject);
             await _context.SaveChangesAsync();

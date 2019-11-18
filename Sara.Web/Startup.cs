@@ -56,8 +56,6 @@ namespace saraproject
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            
-            
             var pathBase = Configuration.GetValue<string>("ASPNETCORE_APPL_PATH");
             if (!string.IsNullOrWhiteSpace(pathBase))
             {
@@ -70,7 +68,7 @@ namespace saraproject
             }
 
             app.UseHttpsRedirection();
-
+            
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
